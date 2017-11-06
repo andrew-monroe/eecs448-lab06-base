@@ -20,6 +20,11 @@ int TestSuite::runTests()
   else
     std::cout << redText("canCreateEmptyList") << std::endl;
 
+  if (canConvertToVector())
+    std::cout << greenText("canConvertToVector") << std::endl;
+  else
+    std::cout << redText("canConvertToVector") << std::endl;
+
 	if (canAddBack())
     std::cout << greenText("canAddBack") << std::endl;
   else
@@ -55,6 +60,33 @@ bool TestSuite::canCreateEmptyList() {
 
   if (emptyList.size() != 0)
     passed = false;  
+
+  return passed;
+}
+
+bool TestSuite::canConvertToVector() {
+  bool passed = true;
+
+  std::vector<int> emptyVec;
+  std::vector<int> simpleVec = {-1,0,1,2};
+  
+  LinkedListOfInts emptyList;
+  LinkedListOfInts simpleList;
+
+  simpleList.addBack(-1);
+  simpleList.addBack(0);
+  simpleList.addBack(1);
+  simpleList.addBack(2);
+
+  if (emptyList.toVector() != emptyVec) {
+    passed = false;
+    std::cout << "Empty vec is failing" << std::endl;
+  }
+  
+  if (simpleList.toVector() != simpleVec) {
+    passed = false;
+    std::cout << "Simple vec is failing" << std::endl;
+  }
 
   return passed;
 }

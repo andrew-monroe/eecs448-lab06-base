@@ -18,10 +18,10 @@ class TestSuite
     TestSuite();
     int runTests();
     bool canCreateEmptyList();
+    bool canConvertToVector();
     bool canAddBack();
     bool canAddFront();
     bool canSearch();
-    bool canConvertToVector();
     bool canRemoveBack();
     bool canRemoveFront();
 
