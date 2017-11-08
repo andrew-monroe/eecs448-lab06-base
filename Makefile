@@ -17,4 +17,4 @@ TestSuite.o: TestSuite.h TestSuite.cpp
 
 #DON'T delete LinkedList.o!
 clean:
-	rm main.o *.*~ prog
+	rm main.o TestSuite.o *.*~ prog
