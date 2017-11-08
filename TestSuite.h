@@ -9,6 +9,7 @@
 #define TEST_SUITE_H
 
 #include <vector>
+#include <algorithm>
 #include <string>
 #include "LinkedListOfInts.h"
 
@@ -17,17 +18,20 @@ class TestSuite
   public:
     TestSuite();
     int runTests();
-    bool canCreateEmptyList();
-    bool canConvertToVector();
-    bool canAddBack();
-    bool canAddFront();
-    bool canSearch();
-    bool canRemoveBack();
-    bool canRemoveFront();
-
   private:
+    void outputTestResult(std::string funcName, std::string errors);
+    std::string canCreateEmptyList();
+    std::string canCheckSize();
+    std::string canConvertToVector();
+    std::string canCheckIsEmpty();
+    std::string canAddBack();
+    std::string canAddFront();
+    std::string canSearch();
+    std::string canRemoveBack();
+    std::string canRemoveFront();
     std::string redText(std::string str);
     std::string greenText(std::string str);
+    std::string vecToString(std::vector<int> vec);
 };
 
 #endif
