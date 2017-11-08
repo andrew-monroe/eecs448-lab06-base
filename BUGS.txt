@@ -1,0 +1,6 @@
+1. isEmpty() method always returns true.
+2. addBack() actually adds to front (possibly a side effect of isEmpty() being broken?).
+3. removeBack() does not decement size or remove a node (probably 
+    because isEmpty() is always true, and it wouldn't remove from an empty list).
+4. removeFront() does not decement size or remove a node (probably 
+    because isEmpty() is always true, and it wouldn't remove from an empty list).
